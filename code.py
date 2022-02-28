@@ -50,16 +50,13 @@ for i in range(25):
 #Resize Images for use with MobileNetV2
 # Upsize all training and testing images to 96x96 for use with mobile net
 minSize = 96 #minimum size requried for mobileNetV2
-# You may use cv2 package. Look for function:
-#"cv2.resize(<originalImage>, dsize=(minSize, minSize), interpolation=cv2.INTER_AREA)"
-# resize train image: You can first initialize a numpy array resized_train_images to store all the resized training images
 resized_train_images = np.zeros((50000, minSize, minSize, 3), dtype=np.float32)
-# <Write code for resizing>
+# Resizing train_images
 for image in resized_train_images:
     image = cv2.resize(image, (minSize, minSize), interpolation=cv2.INTER_AREA)
 # resize test image: You can first initialize a numpy array resized_test_images to store all the resized test images
 resized_test_images = np.zeros((10000, minSize, minSize, 3), dtype=np.float32)
-# <Write code for resizing>
+# Resizing test_images
 for image in resized_test_images:
     image = cv2.resize(image, (minSize, minSize), interpolation=cv2.INTER_AREA)
 
